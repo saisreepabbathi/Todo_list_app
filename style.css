@@ -1,0 +1,232 @@
+body {
+    background: linear-gradient(135deg, #d9fdd3 0%, #bdf0b4 100%);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+form label {
+    align-self: flex-start;
+    margin-left: 0.25rem;
+    font-weight: 500;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form button, form a {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+.form-container {
+    background: #f5ffee;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 200px; /* 👈 Smaller width */
+    width: 50%;
+    margin: 0 auto;
+}
+
+.todo-card {
+    max-width: 450px;
+    width: 100%;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 2rem 0;
+    transition: transform 0.3s ease;
+}
+.todo-card:hover {
+    transform: translateY(-3px);
+}
+
+.header-user {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #3e64ff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #2bb3b3;
+    font-size: 2rem;
+}
+
+.add-task-group {
+    display: flex;
+    background: #e6f4f1;
+    border-radius: 12px;
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+.add-task-group input[type="text"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1.05rem;
+    flex: 1;
+    padding: 0.5rem;
+    color: #333;
+}
+.add-task-group input[type="text"]::placeholder {
+    color: #9e9e9e;
+}
+.add-task-group button {
+    background: linear-gradient(90deg, #36d1dc, #5b86e5);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.add-task-group button:hover {
+    background: linear-gradient(90deg, #5b86e5, #36d1dc);
+    box-shadow: 0 0 8px rgba(91, 134, 229, 0.3);
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #5b86e5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.list-group-item {
+    background: #f1f9ff;
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+}
+.list-group-item:hover {
+    background: #e0f7ff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.task-actions .btn {
+    font-size: 0.9rem;
+    margin-left: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.2s;
+    border: none;
+}
+
+.btn-success {
+    background-color: #4cd137;
+    color: #fff;
+}
+.btn-warning {
+    background-color: #fbc531;
+    color: #fff;
+}
+.btn-danger, .btn-outline-danger {
+    background-color: #e84118;
+    color: #fff;
+}
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through;
+    color: #a4b0be;
+}
+
+.empty-state {
+    text-align: center;
+    color: #9aaec2;
+    font-size: 1.1rem;
+    margin: 1.2rem 0;
+}
+.empty-state-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+
+.logout-btn {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 0.7rem 0;
+    box-shadow: 0 2px 8px rgba(161, 140, 209, 0.2);
+    transition: background 0.2s, color 0.2s;
+}
+.logout-btn:hover {
+    background: linear-gradient(90deg, #fbc2eb, #a18cd1);
+}
+
+.alert-danger {
+    background: linear-gradient(90deg, #ffbaba, #ff7b7b);
+    color: #721c24;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .todo-card {
+        max-width: 95vw;
+        padding: 1rem;
+    }
+}
+
+.auth-card .form-control {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    max-width: 240px;
+    margin: 0.5rem auto;
+    display: block;
+}
